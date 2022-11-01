@@ -11,7 +11,8 @@ export const Star = () => {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 32px 32px;
+        margin-left: 32px;
+        margin-top: 32px;
     `
 
     return (
