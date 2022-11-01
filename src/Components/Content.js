@@ -15,7 +15,7 @@ export const Content = (props) => {
         line-height: 24px;
     `
     return (
-        <Content>
+        <Content style={props.style}>
             <Title>{props.head}</Title>
             <Para>{props.para}</Para>
         </Content>
