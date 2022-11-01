@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
-export const Submit = () => {
+export const Submit = (props) => {
     const Button = styled.button`
         width: 341px;
         height: 45px;
@@ -20,6 +20,8 @@ export const Submit = () => {
         }
     `
     return (
-        <Button>Submit</Button>
+        <Button
+            onClick={props.test}
+        >Submit</Button>
     )
 }
