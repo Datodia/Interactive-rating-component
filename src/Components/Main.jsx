@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Star } from './Star'
 
 export const Main = () => {
 
@@ -12,8 +13,6 @@ export const Main = () => {
         display: flex;
         margin: auto;
         margin-top: 30vh;
-        align-items: center;
-        justify-content: center;
     `
     const Text = styled.h1`
         color: white;
@@ -21,9 +20,7 @@ export const Main = () => {
     `
     return (
         <Main>
-            <Text>
-                Hello
-            </Text>
+            <Star></Star>
         </Main>
     )
 }
