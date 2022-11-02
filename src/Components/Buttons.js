@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 export const Buttons = (props) => {
@@ -14,6 +14,7 @@ export const Buttons = (props) => {
         background-color: #262E38;
         border: none;
         color: white;
+        cursor: pointer;
 
         &:hover{
             background-color: #FC7614;
@@ -25,14 +26,19 @@ export const Buttons = (props) => {
 
     const buttonArray = [1, 2, 3, 4, 5]
     const handleClick = (e) => {
-        console.log(e.target.id)
+        props.value(e.target.id)
+        //e.target.style.backgroundColor = "gray"
     }
 
     return (
         <Wrapper>
             {buttonArray.map((value) => {
                 return (
-                    <Button onClick={handleClick} id={value}>{value}</Button>
+                    <Button
+                        onClick={handleClick}
+                        key={value}
+                        id={value}
+                    >{value}</Button>
                 )
             })}
         </Wrapper>

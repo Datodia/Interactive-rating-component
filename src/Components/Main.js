@@ -19,25 +19,13 @@ export const Main = () => {
         margin: auto;
         margin-top: 30vh;
     `
-
+    const [num, setNum] = useState()
     const [show, setShow] = useState(true)
     const handleClick = () => {
-        setShow(false)
-        console.log(show)
+
+        { num && setShow(false) }
     }
-    // return (
-    //     <Main>
-    //         <Star />
-    //         <Content
-    //             head="How did we do?"
-    //             para="Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!"
-    //         />
-    //         <Buttons />
-    //         <Submit
-    //             test={handleClick}
-    //         />
-    //     </Main>
-    // )
+
 
     if (show) {
         return (
@@ -47,16 +35,20 @@ export const Main = () => {
                     head="How did we do?"
                     para="Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!"
                 />
-                <Buttons />
+                <Buttons
+                    value={setNum}
+                />
                 <Submit
-                    test={handleClick}
+                    click={handleClick}
                 />
             </Main>
         )
     } else {
         return (
             <Main>
-                <Thanks></Thanks>
+                <Thanks
+                    value={num}
+                />
                 <Content
                     style={{
                         textAlign: 'center'
@@ -67,4 +59,6 @@ export const Main = () => {
             </Main>
         )
     }
+
+
 }

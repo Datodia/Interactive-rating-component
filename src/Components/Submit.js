@@ -12,6 +12,7 @@ export const Submit = (props) => {
         color: white;
         font-size: 15px;
         font-family: 'Overpass';
+        cursor: pointer;
 
 
         &:hover{
@@ -21,7 +22,7 @@ export const Submit = (props) => {
     `
     return (
         <Button
-            onClick={props.test}
+            onClick={props.click}
         >Submit</Button>
     )
 }
