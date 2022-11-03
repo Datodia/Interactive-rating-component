@@ -6,6 +6,10 @@ export const Buttons = (props) => {
         margin: 24px 32px;
         display: flex;
         gap: 21px;
+        @media screen and (max-width : 700px){
+            margin: 14px 24px;
+            gap: 17px;
+        }
     `
     const Button = styled.button`
         width: 51px;
@@ -19,9 +23,10 @@ export const Buttons = (props) => {
         &:hover{
             background-color: #FC7614;
         }
-        // &:focus{
-        //     background-color: gray;
-        // }
+        @media screen and (max-width : 700px){
+            width: 40px;
+            height: 40px;
+        }
     `
 
     const buttonArray = [1, 2, 3, 4, 5]
@@ -31,9 +36,8 @@ export const Buttons = (props) => {
                 return (
                     <Button
                         onClick={(e) => {
-
                             props.setValue(e.target.id)
-                            e.target.style.backgroundColor = "gray"
+                            e.target.style.backgroundColor = true ? "red" : "gray";
                             console.log(e.target.style)
                         }}
                         key={key}

@@ -19,6 +19,11 @@ export const Submit = (props) => {
             background-color: white;
             color: #FC7614;
         }
+        @media screen and (max-width : 700px){
+            width: 279px;
+            height: 45px;
+            font-size: 14px;
+        }
     `
     return (
         <Button

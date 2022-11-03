@@ -13,6 +13,13 @@ export const Star = () => {
         align-items: center;
         margin-left: 32px;
         margin-top: 32px;
+
+        @media screen and (max-width : 700px){
+            width: 40px;
+            height: 40px;
+            margin-left: 24px;
+            margin-top: 24px;
+        }
     `
 
     return (
