@@ -10,11 +10,11 @@ export const Thanks = (props) => {
             <Hanks>
                 <img src={mobile} />
             </Hanks>
-            <Rate>You selected {props.setValue} out of 5</Rate>
+            <Rate>You selected {props.value} out of 5</Rate>
         </>
 
     )
-    
+
 
 }
 

@@ -5,9 +5,17 @@ import styled from 'styled-components'
 
 
 function App() {
-
+  const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  `
   return (
-    <Main />
+    <Wrapper>
+      <Main />
+    </Wrapper>
+
   );
 }
 

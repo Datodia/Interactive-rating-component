@@ -16,8 +16,12 @@ export const Main = () => {
         background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
         display: flex;
         flex-direction: column;
-        margin: auto;
-        margin-top: 30vh;
+        justify-content: center;
+
+        @media screen and (max-width : 700px){
+            width: 327px;
+            height: 360px;
+        }
     `
     const [num, setNum] = useState()
     const [show, setShow] = useState(true)
@@ -46,7 +50,7 @@ export const Main = () => {
         return (
             <Main>
                 <Thanks
-                    setValue={num}
+                    value={num}
                 />
                 <Content
                     style={{
