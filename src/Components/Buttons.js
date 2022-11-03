@@ -19,28 +19,28 @@ export const Buttons = (props) => {
         &:hover{
             background-color: #FC7614;
         }
-        &:focus{
-            background-color: gray;
-        }
+        // &:focus{
+        //     background-color: gray;
+        // }
     `
 
     const buttonArray = [1, 2, 3, 4, 5]
-    const handleClick = (e) => {
-        props.value(e.target.id)
-        //e.target.style.backgroundColor = "gray"
-    }
-
     return (
         <Wrapper>
-            {buttonArray.map((value) => {
+            {buttonArray.map((value, key) => {
                 return (
                     <Button
-                        onClick={handleClick}
-                        key={value}
+                        onClick={(e) => {
+
+                            props.setValue(e.target.id)
+                            e.target.style.backgroundColor = "gray"
+                            console.log(e.target.style)
+                        }}
+                        key={key}
                         id={value}
                     >{value}</Button>
                 )
             })}
-        </Wrapper>
+        </Wrapper >
     )
 }
