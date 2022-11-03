@@ -22,7 +22,6 @@ export const Main = () => {
     const [num, setNum] = useState()
     const [show, setShow] = useState(true)
     const handleClick = () => {
-
         { num && setShow(false) }
     }
 
@@ -36,7 +35,7 @@ export const Main = () => {
                     para="Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!"
                 />
                 <Buttons
-                    value={setNum}
+                    setValue={setNum}
                 />
                 <Submit
                     click={handleClick}
@@ -47,7 +46,7 @@ export const Main = () => {
         return (
             <Main>
                 <Thanks
-                    value={num}
+                    setValue={num}
                 />
                 <Content
                     style={{
