@@ -14,15 +14,13 @@ export const Thanks = (props) => {
         </>
 
     )
-
-
 }
 
 const Hanks = styled.div`
         height: 108px;
         width: 162px;
         margin: 34px 0 24px 0;
-        margin-left: 33%;
+        margin-left: 28%;
     `;
 const Rate = styled.div`
         width: 192px;
