@@ -21,4 +21,9 @@ code {
     max-height: 13.33px;
   }
 
+  #mobile {
+    max-width: 114px;
+    max-height: 96px;
+  }
+
 }
