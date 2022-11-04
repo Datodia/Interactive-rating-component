@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import styled from 'styled-components'
 
 export const Buttons = (props) => {
@@ -16,17 +15,17 @@ export const Buttons = (props) => {
         height: 51px;
         border-radius: 50%;
         //background-color: ${(props) => props.value === props.id ? "gray" : 'red'};
-        background-color: red;
+        background-color: #262E38;;
         border: none;
         color: white;
         cursor: pointer;
 
-        // &:hover{
-        //     background-color: #FC7614;
-        // }
-        &:focus{
-            background-color: black;
+        &:hover{
+            background-color: #FC7614;
         }
+        // &:focus{
+        //     background-color: black;
+        // }
         @media screen and (max-width : 700px){
             width: 40px;
             height: 40px;
@@ -41,14 +40,10 @@ export const Buttons = (props) => {
                     <Button
                         onClick={(e) => {
                             props.setValue(e.target.id)
-                            // console.log(e.target.id)
-                            // console.log(e.target.style.backgroundColor)
-                            // console.log(e.id)
+                            e.target.style.backgroundColor = "gray"
                         }}
                         key={key}
                         id={value}
-
-                    //style={{ backgroundColor: color }}
                     >{value}</Button>
                 )
             })}
