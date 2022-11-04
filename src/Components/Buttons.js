@@ -15,13 +15,17 @@ export const Buttons = (props) => {
         width: 51px;
         height: 51px;
         border-radius: 50%;
-        background-color: #262E38;
+        //background-color: ${(props) => props.value === props.id ? "gray" : 'red'};
+        background-color: red;
         border: none;
         color: white;
         cursor: pointer;
 
-        &:hover{
-            background-color: #FC7614;
+        // &:hover{
+        //     background-color: #FC7614;
+        // }
+        &:focus{
+            background-color: black;
         }
         @media screen and (max-width : 700px){
             width: 40px;
@@ -37,11 +41,14 @@ export const Buttons = (props) => {
                     <Button
                         onClick={(e) => {
                             props.setValue(e.target.id)
-                            e.target.style.backgroundColor = true ? "red" : "gray";
-                            console.log(e.target.style)
+                            // console.log(e.target.id)
+                            // console.log(e.target.style.backgroundColor)
+                            // console.log(e.id)
                         }}
                         key={key}
                         id={value}
+
+                    //style={{ backgroundColor: color }}
                     >{value}</Button>
                 )
             })}

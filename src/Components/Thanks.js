@@ -8,7 +8,7 @@ export const Thanks = (props) => {
     return (
         <>
             <Hanks>
-                <img src={mobile} />
+                <img id='mobile' src={mobile} />
             </Hanks>
             <Rate>You selected {props.value} out of 5</Rate>
         </>
@@ -21,9 +21,8 @@ export const Thanks = (props) => {
 const Hanks = styled.div`
         height: 108px;
         width: 162px;
-        margin: 45px 0 32px 0;
-        margin-left: 27%;
-        
+        margin: 34px 0 24px 0;
+        margin-left: 33%;
     `;
 const Rate = styled.div`
         width: 192px;
@@ -35,4 +34,10 @@ const Rate = styled.div`
         color: #FC7614;
         border-radius: 22px;
         margin-left: 25%;
+
+        @media screen and (max-width : 700px){
+            width: 168px;
+            font-size: 14px;
+            margin-top: -20px;
+        }
     `;
